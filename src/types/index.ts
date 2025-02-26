@@ -12,9 +12,11 @@ export interface SiteContent {
   hero: HeroProps;
   experience: ExperienceProps[];
   projects: ProjectProps[];
+  education: EducationProps[];
   about: AboutProps;
 }
 
+//HeroProps
 export interface HeroProps {
   name: string;
   specialty: string;
@@ -22,6 +24,15 @@ export interface HeroProps {
   email: string;
 }
 
+//EducationProps
+export interface EducationProps {
+  academy: string;
+  position: string;
+  startDate: string;
+  endDate: string;
+}
+
+//ExperienceProps
 export interface ExperienceProps {
   company: string;
   position: string;
@@ -30,6 +41,7 @@ export interface ExperienceProps {
   summary: string | string[];
 }
 
+//ProjectProps
 export interface ProjectProps {
   name: string;
   summary: string;
@@ -38,6 +50,7 @@ export interface ProjectProps {
   linkSource?: string;
 }
 
+//AboutProps
 export interface AboutProps {
   description: string;
   image: string;

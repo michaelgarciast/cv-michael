@@ -1,5 +1,5 @@
 ---
-import type { HeroProps } from "@types";
+import type { HeroProps } from '@types';
 type Props = HeroProps;
 
 const { name, specialty, summary, email } = Astro.props;
@@ -22,6 +22,8 @@ const { name, specialty, summary, email } = Astro.props;
 
   <a
     class="text-sm py-5 px-8 text-[#fff] inline-block font-medium leading-5 bg-primary rounded-full"
-    href={`mailto:${email}`}>Get in Touch</a
+    href={`mailto:${email}`}
+  >
+    Contacto</a
   >
 </section>
