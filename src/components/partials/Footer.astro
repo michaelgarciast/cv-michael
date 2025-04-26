@@ -1,0 +1,33 @@
+---
+import type { FooterProps } from '@types';
+
+type Props = Pick<FooterProps, 'socialLinks' | 'author'>;
+
+const { author, socialLinks } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class="text-white w-full text-center pb-8 pt-5 px-5 border-t border-neutral/20"
+>
+  <ul class="flex flex-wrap gap-x-5 justify-center mb-5 text-xs">
+    {
+      socialLinks.map(({ text, href }) => (
+        <li>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-primary inline-block py-3 px-4 after:relative after:bottom-[-4px] after:content-[url(../assets/icons/external.svg)]"
+          >
+            {text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="text-xs">
+    Diseño & Desarrollo {author} © {currentYear}. <span class="text-neutral">
+    </span>
+  </p>
+</footer>
