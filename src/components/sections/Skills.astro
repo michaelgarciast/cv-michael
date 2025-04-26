@@ -1,0 +1,66 @@
+---
+import Section from '../common/Section.astro';
+import type { SkillsProps } from '@types';
+
+interface Props {
+  skills: SkillsProps[];
+}
+
+const { skills } = Astro.props;
+---
+
+<Section text="Skills" href="Skills">
+  <div class="relative overflow-x-hidden py-8">
+    <div
+      class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
+    >
+    </div>
+
+    <div
+      class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max"
+    >
+      {
+        [...skills, ...skills, ...skills].map((tech) => (
+          <div class="flex items-center gap-2 group transition-all duration-300">
+            <img
+              src={`/assets/images/logos/skills/${tech.nameTechnology}.svg`}
+              alt={tech.nameTechnology}
+              class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
+              width="30"
+              height="30"
+              loading="lazy"
+            />
+            <span class="text-lg font-medium text-white text-[var(--white-icon)]">
+              {tech.nameTechnology.charAt(0).toUpperCase() +
+                tech.nameTechnology.slice(1)}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Section>
+
+<style is:global>
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 60s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .animate-scroll {
+      animation-duration: 50s;
+    }
+  }
+</style>
