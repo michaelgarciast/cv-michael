@@ -1,4 +1,4 @@
-import type { SiteContent } from "../types";
+import type { SiteContent } from "@types";
 
 export const SITE_CONTENT: SiteContent = {
   //Presentation
@@ -141,5 +141,4 @@ export const SITE_CONTENT: SiteContent = {
     `,
     image: "/../assets/images/profile/alejandro-big.jpg",
   },
-  technologies: [],
 };
