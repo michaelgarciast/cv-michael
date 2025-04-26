@@ -1,7 +1,7 @@
 ---
 import type { FooterProps } from '@types';
 
-type Props = Pick<FooterProps, 'socialLinks' | 'author'>;
+type Props = Pick<FooterProps, 'author' | 'socialLinks'>;
 
 const { author, socialLinks } = Astro.props;
 const currentYear = new Date().getFullYear();

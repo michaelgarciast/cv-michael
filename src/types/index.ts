@@ -3,7 +3,6 @@ export interface SiteConfig extends HeaderProps {
   description: string;
   lang: string;
   author: string;
-  socialLinks: { text: string; href: string }[];
   socialImage: string;
   canonicalURL?: string;
 }
@@ -12,6 +11,7 @@ export interface SiteContent {
   hero: HeroProps;
   experience: ExperienceProps[];
   projects: ProjectProps[];
+  skills: SkillsProps[];
   education: EducationProps[];
   about: AboutProps;
 }
@@ -50,6 +50,9 @@ export interface ProjectProps {
   linkSource?: string;
 }
 
+export interface SkillsProps {
+  nameTechnology: string;
+}
 //AboutProps
 export interface AboutProps {
   description: string;
@@ -59,4 +62,9 @@ export interface AboutProps {
 export interface HeaderProps {
   siteLogo: string;
   navLinks: { text: string; href: string }[];
+}
+
+export interface FooterProps {
+  socialLinks: { text: string; href: string }[];
+  author: string;
 }
