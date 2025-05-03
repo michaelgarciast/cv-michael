@@ -2,8 +2,6 @@
 
 accessible and responsive portfolio for your personal portfolio website.
 
-![zen-og](https://github.com/user-attachments/assets/7a72aaae-6652-4cd0-becc-8e6a3c224993)
-
 ## 🔥 Features
 
 - [x] Minimalist design. clean and simple
